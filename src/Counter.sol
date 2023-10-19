@@ -19,4 +19,8 @@ contract Counter {
         number--;
         lastAddr = msg.sender;
     }
+
+    function showAddress() public view returns (address) {
+        return lastAddr;
+    }
 }
