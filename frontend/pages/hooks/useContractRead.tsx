@@ -1,5 +1,5 @@
 import { useContractRead, useContract, Web3Button } from "@thirdweb-dev/react";
-import {CA} from "../../pages/address";
+import {CA} from "../../constants/address";
 
 // Your smart contract address
 
