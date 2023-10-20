@@ -52,13 +52,15 @@ const Home: NextPage = () => {
         </div>
 
         <div className={styles.functions}>
-        <Web3Button contractAddress = {CA} contractAbi={abi} action={(contract) => contract.call("setNumber", [5])}>setNumber</Web3Button>
+        <Web3Button onSuccess={() => alert("Number set succesfully!")} onError={() => alert("Something went wrong!")} contractAddress = {CA} contractAbi={abi} action={(contract) => contract.call("setNumber", [5]) }>setNumber</Web3Button>
 
-        <Web3Button contractAddress = {CA} action={(contract) => contract.call("increment")}>increment</Web3Button>
+        <Web3Button onSuccess={() => alert("Number increased by one!")}onError={() => alert("Something went wrong!")} contractAddress = {CA} action={(contract) => contract.call("increment")}>increment</Web3Button>
 
-        <Web3Button contractAddress = {CA} action={(contract) => contract.call("decrement")}>decrement</Web3Button>
+        <Web3Button onSuccess={() => alert("Number decreased by one!")}onError={() => alert("Something went wrong!")} contractAddress = {CA} action={(contract) => contract.call("decrement")}>decrement</Web3Button>
+             
 
-        <button className={styles.button} onClick={getAddr}>show Last</button>
+             <button className={styles.button} onClick={getAddr}>reveal last caller</button>
+           
 
         </div>
 

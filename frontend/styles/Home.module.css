@@ -64,10 +64,11 @@
 }
 
 .button {
+  background-color: #743f93;
   border-radius: 1 rem;
-  padding: 5 rem, 10 rem;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  text-decoration: none;
   font-size: 1rem;
   transition: 0.3s;
   cursor: pointer;
