@@ -2,7 +2,7 @@ import {  ConnectWallet, Web3Button, useContract, useContractRead } from "@third
 import styles from "../styles/Home.module.css";
 import { NextPage } from "next";
 import {abi} from "../constants/abi";
-import {CA} from "../constants/address;
+import {CA} from "../constants/address";
 import { useState } from "react";
 
 const Home: NextPage = () => {
