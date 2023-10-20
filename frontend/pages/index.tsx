@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const Home: NextPage = () => {
    const { contract } = useContract(CA, abi);
-   const [lastAddress, setLastAddress] = useState("")
+   const [lastAddress, setLastAddress] = useState("");
    const { data, isLoading, error } = useContractRead(
      contract,
      "showAddress",
