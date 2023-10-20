@@ -4,9 +4,10 @@ import { NextPage } from "next";
 import {abi} from "../pages/abi";
 import {CA} from "../pages/address";
 import { useState } from "react";
+import useget from "../pages/hooks/useContract";
 
 const Home: NextPage = () => {
-   const { contract } = useContract(CA);
+   const { contract } = useContract(CA, abi);
    const [lastAddress, setLastAddress] = useState("")
    const { data, isLoading, error } = useContractRead(
      contract,
